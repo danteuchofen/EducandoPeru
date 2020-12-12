@@ -33,11 +33,12 @@ public class MenuController : MonoBehaviour
 
     void Update()
     {
+#if UNITY_EDITOR
         if (Input.GetButtonDown("Jump"))
         {
             RestartActCompleted();
         }
-        print(activitiesCompleted);
+#endif
     }
 
     void RestartActCompleted()

@@ -54,12 +54,17 @@ public class DialogManager : MonoBehaviour
             }
             else
             {
-                if (jsonDialogue.name.Contains("Act") && PlayerPrefs.GetInt("actCompleted") < sceneID)
-                {
-                    GameManager.Instance.CompleteAct();
-                }
-                StartCoroutine(GameManager.Instance.Fading(true));
                 canPrint = false;
+
+                if (jsonDialogue.name.Contains("Act"))
+                {
+                    if (PlayerPrefs.GetInt("actCompleted") < sceneID) GameManager.Instance.SaveProgress();
+                    GameManager.Instance.ShowWinPanel();
+                }
+                else
+                {
+                    StartCoroutine(GameManager.Instance.Fading(true));
+                }
             }
         }
     }
@@ -137,6 +142,7 @@ public class DialogManager : MonoBehaviour
         else
         {
             line = layer[index - 1][0][1][0][0];
+            if (GameManager.Instance.firstWin) GameManager.Instance.firstWin = false;
         }
 
         foreach (JsonData key in line.Keys)

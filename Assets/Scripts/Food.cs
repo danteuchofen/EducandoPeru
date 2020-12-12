@@ -86,6 +86,7 @@ public class Food : MonoBehaviour
             else
             {
                 EventSystem.current.currentSelectedGameObject.GetComponent<RectTransform>().DOShakeAnchorPos(1, strength, strength);
+                if (GameManager.Instance.firstWin) GameManager.Instance.firstWin = false;
                 StartCoroutine(DialogManager.Instance.PrintOptions(false));
             }
         }

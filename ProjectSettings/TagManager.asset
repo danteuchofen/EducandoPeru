@@ -11,6 +11,7 @@ TagManager:
   - Button
   - SecButton
   - Indicator
+  - Win
   layers:
   - Default
   - TransparentFX
