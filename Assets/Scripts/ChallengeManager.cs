@@ -27,10 +27,12 @@ public class ChallengeManager : MonoBehaviour
 
     void Update()
     {
+#if UNITY_EDITOR
         if (Input.GetButtonDown("Jump"))
         {
             RestartActCompleted();
         }
+#endif
     }
 
     public void UploadStreak(int _currentStreak)

@@ -10,15 +10,17 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
     public GameObject activityPanels;
+    public int activityIndex;
+
     private List<GameObject> panels = new List<GameObject>();
-    private GameObject buttonPanel, secButtonPanel, textCointainer, character, indicatorPanel, fadePanel;
+    private GameObject buttonPanel, secButtonPanel, textCointainer, character, indicatorPanel, fadePanel, winPanel;
     [HideInInspector]
     public int panelIndex = 0, indicatorIndex = 0;
-    private int loopPanelIndex = 0, loopPanelNumber = 0, previousPanelIndex = 0;
+    private int loopPanelIndex = 0, loopPanelNumber = 0, previousPanelIndex = 0, totalActivities = 0, firstWonActivities = 0;
     private float tweenSpeed = 1;
+    [HideInInspector]
+    public bool firstWin = true;
     private Tween panelTween;
-
-    public int activityIndex;
 
     void Awake()
     {
@@ -30,6 +32,7 @@ public class GameManager : MonoBehaviour
         buttonPanel = GameObject.FindGameObjectWithTag("Button");
         secButtonPanel = GameObject.FindGameObjectWithTag("SecButton");
         fadePanel = GameObject.FindGameObjectWithTag("Fade");
+        winPanel = GameObject.FindGameObjectWithTag("Win");
 
         for (int i = 0; i < activityPanels.transform.childCount; i++)
         {
@@ -49,6 +52,7 @@ public class GameManager : MonoBehaviour
         if (indicatorPanel != null) indicatorPanel.gameObject.SetActive(false);
         ActiveButton(buttonPanel, true, StartDialogue, "EMPEZAR");
         secButtonPanel.gameObject.SetActive(false);
+        if (winPanel != null) winPanel.gameObject.SetActive(false);
         StartCoroutine(Fading(false));
     }
 
@@ -193,6 +197,7 @@ public class GameManager : MonoBehaviour
     public void ShowIndicator(bool active, string text)
     {
         if (active) indicatorPanel.GetComponentInChildren<Text>().text = text;
+        else FinishActivity();
         ScaleImage(indicatorPanel, active);
     }
 
@@ -262,6 +267,19 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    private IEnumerator WaitForDotween(GameObject _gameObject)
+    {
+        yield return panelTween.WaitForCompletion();
+        _gameObject.gameObject.SetActive(false);
+    }
+
+    public void FinishActivity()
+    {
+        totalActivities++;
+        if (firstWin) firstWonActivities++;
+        else firstWin = true;
+    }
+
     public IEnumerator Fading(bool active)
     {
 
@@ -284,7 +302,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void CompleteAct()
+    public void SaveProgress()
     {
         int actCompleted = PlayerPrefs.GetInt("actCompleted");
         actCompleted++;
@@ -292,10 +310,27 @@ public class GameManager : MonoBehaviour
         PlayerPrefs.Save();
     }
 
-    private IEnumerator WaitForDotween(GameObject _gameObject)
+    public void ShowWinPanel()
     {
-        yield return panelTween.WaitForCompletion();
-        _gameObject.gameObject.SetActive(false);
+        int totalStars = winPanel.transform.GetChild(0).GetChild(1).childCount,
+            stars = (firstWonActivities * totalStars) / totalActivities;
+
+        winPanel.GetComponentInChildren<Text>().text = "Felicidades, has terminado la actividad." + "\n" + "Haz completado " + firstWonActivities + " de las " + totalActivities + " actividades sin equivocarte";
+        for (int i = 0; i < totalStars; i++)
+        {
+            if (i == stars) break;
+            winPanel.transform.GetChild(0).GetChild(1).GetChild(i).GetComponent<Image>().DOFade(1f, 0);
+        }
+        ActiveImage(winPanel, true);
+        ActiveButton(buttonPanel, true, CompleteAct, "TERMINAR");
+    }
+
+    private void CompleteAct()
+    {
+        ActiveImage(winPanel, false);
+        ActiveButton(buttonPanel, false, CompleteAct);
+
+        StartCoroutine(Fading(true));
     }
 
     public void MixChildOrder(GameObject parent)
