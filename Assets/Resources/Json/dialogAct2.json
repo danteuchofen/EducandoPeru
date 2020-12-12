@@ -1,0 +1,134 @@
+[
+	{
+		"Pablo": "Hola, soy Pablo."
+	},
+	{
+		"Pablo": "Escuché decir a mi mamá que debo ordenar mi cuarto."
+	},
+	{
+		"Pablo": "¡Ayúdame, por favor!"
+	},
+	{
+		"Show": ""
+	},
+	{
+		"Pablo": "Primero comencemos con mis juguetes."
+	},
+	{
+		"Pablo": "Los tengo en color rojo, verde y azul."
+	},
+	{
+		"Pablo": "Ayúdame a llevarlos a su respectivo tapete."
+	},
+	{
+		"?": [
+			{
+				"1": [
+					{
+						"?": ""
+					}
+				]
+			},
+			{
+				"2": [
+					{
+						"Pablo": "El color del juguete es diferente. Inténtalo nuevamente."
+					}
+				]
+			}
+		]
+	},
+	{
+		"Pablo": "¡Increíble! Lo has hecho muy bien."
+	},
+	{
+		"Pablo": "Ahora necesito que respondas una pregunta."
+	},
+	{
+		"Show": ""
+	},
+	{
+		"Pablo": "¿Cuál afirmación es correcta?"
+	},
+	{
+		"?": [
+			{
+				"1": [
+					{
+						"?": ""
+					}
+				]
+			},
+			{
+				"2": [
+					{
+						"Pablo": "Esa no es la afirmación correcta."
+					}
+				]
+			}
+		]
+	},
+	{
+		"Hide": ""
+	},
+	{
+		"Pablo": "Oye, eres muy bueno en esto. Gracias por ayudarme con mis juguetes,"
+	},
+	{
+		"Pablo": "Ahora tengo que ordenar mi biblioteca. Siempre es bueno mantener ordenado todo."
+	},
+	{
+		"Show": ""
+	},
+  {
+    "Pablo": "Mira, tengo todos estos cuadernos que uso en mi colegio."
+  },
+	{
+		"Pablo": "Ayúdame a guardarlos de menor a mayor en mi estante."
+	},
+	{
+		"?": [
+			{
+				"1": [
+					{
+						"?": ""
+					}
+				]
+			},
+			{
+				"2": [
+					{
+						"Pablo": "Ese no es el orden correcto. Fíjate bien su número."
+					}
+				]
+			}
+		]
+	},
+	{
+		"Hide": ""
+	},
+	{
+		"Pablo": "Oye, eres excelente haciendo esto. No se qué haría sin tu ayuda."
+	},
+	{
+		"Pablo": "Mira, encontré esto en mi cuaderno de matemática."
+	},
+	{
+		"Show": ""
+	},
+	{
+		"Pablo": "Trata sobre los signos mayor, menor e igual."
+	},
+	{
+		"?": ""
+	},
+	{
+		"Hide": ""
+	},
+	{
+		"Pablo": "Qué interesante, ¿cierto?"
+	},
+	{
+		"Pablo": "Siempre es bueno aprender cosas nuevas cada día."
+	}
+]

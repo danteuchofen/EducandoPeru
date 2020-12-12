@@ -1,0 +1,108 @@
+- Sofía: Hola, yo soy Sofía. Estaba a punto de preparar un delicioso postre de manzana.
+- Sofía: Pero me acabo de dar cuenta que no tengo las cantidades correctas para prepararlo. 
+- Sofía: Necesito de tu ayuda para poder hacer este delicioso postre para mi familia. Vamos.
+- Show: ""
+- Sofía: Muy bien, vamos a empezar. Según la lista de ingredientes necesito 4 manzanas muy verdes y grandes. 
+- Sofía: Ayúdame a encontrarlas, dándole click en cada una.
+- ?: 
+    - 1: 
+         - Sofía: Bien, faltan 3.
+         - Sofía: Bien, faltan 2.
+         - Sofía: Bien, falta 1.
+         - ?: ""
+    - 2: 
+         - Sofía: Incorrecto, inténtalo nuevamente.
+- Sofía: Muy bien, continuemos.
+- Sofía: Ahora encuentra 2 limones. Esto le dará un gusto muy rico a nuestro postre.
+- ?:
+    - 1:
+         - Sofía: Bien, te falta 1.
+         - ?: ""
+    - 2:
+         - Sofía: Incorrecto, inténtalo nuevamente.
+- Sofía: Ahora, necesitamos 2 cuadritos de mantequilla.
+- ?: 
+    - 1:
+         - Sofía: Bien, te falta 1.
+         - ?: ""
+    - 2:
+         - Sofía: Incorrecto, inténtalo nuevamente.
+- Sofia: Ahora, 1 cucharada de canela en polvo.
+- ?: 
+    - 1:
+         - ?: ""
+    - 2:
+         - Sofía: Incorrecto, inténtalo nuevamente.
+- Sofia: Ahora, 4 tazas de agua.
+- ?: 
+    - 1:
+         - Sofía: Bien, te faltan 3.
+         - Sofía: Bien, te faltan 2.
+         - Sofía: Bien, te falta 1.
+         - ?: ""
+    - 2:
+         - Sofía: Incorrecto, inténtalo nuevamente.
+- Sofia: Y como último y no menos importante, nos faltaría el azúcar. Encuentra 4 cucharadas de azúcar.
+- ?: 
+    - 1:
+         - Sofía: Bien, te faltan 3.
+         - Sofía: Bien, te faltan 2.
+         - Sofía: Bien, te falta 1.
+         - ?: ""
+    - 2:
+         - Sofía: Incorrecto, inténtalo nuevamente.
+- Hide: ""
+- Sofía: Muy bien, hemos encontrado todos los ingredientes.
+- Show: ""
+- Sofía: Ahora, ¿podrías decirme cúantos ingredientes tenemos?
+- ?:
+    - 1:
+         - ?: ""
+    - 2: 
+         - Sofía: Respuesta incorrecta. Cuenta nuevamente ¡Tú puedes hacerlo!
+- Sofía: Excelente, hay 17 ingredientes.
+- Hide: ""
+- Sofía: Ahora tenemos que colocar todos estos ingredientes para su preparación en una olla pequeña.
+- Show: ""
+- Sofía: ¿En qué puesto crees que esté la olla más pequeña?
+- ?: 
+    - 1:
+         - ?: ""
+    - 2:
+         - Sofía: Esa no es la olla.
+- Sofia: Muy bien, estaba en ese puesto. Lo estás haciendo muy bien.
+- Hide: ""
+- Sofía: Vamos a continuar. Ahora, mira la lista de ingredientes del puré.
+- Show: ""
+- Sofía: Según la lista que aparece en pantalla se necesitan estos ingredientes para preparar la masa.
+- Hide: ""
+- Sofía: Ahora observa las siguientes imágenes.
+- Show: ""
+- Sofía: Según la receta, ¿cúal de estas imágenes crees que sea la correcta?
+- ?: 
+    - 1:
+        - ?: ""
+    - 2:
+        - Sofía: Inténtalo nuevamente ¡Ánimos!
+- Sofía: Muy bien, escogiste la opción correcta.
+- Hide: ""
+- Sofía: Ya tenemos todos los ingredientes, y la olla donde lo vamos a preparar.
+- Show: ""
+- Sofía: Dale click a COCINAR para comenzar a preparar el postre.
+- ?:
+- Sofía: Ahora dale a CORTAR para rebanar el postre.
+- ?:
+- Sofía: Hemos terminado de preparar nuestro delicioso postre.
+- Sofía: Ahora ayúdame a colocarlo en estas bandejas.
+- Show: ""
+- Sofía: Recuerda que cada una de las bandejas solo pueden llevar 5 postres.
+- ?: 
+    - 1:
+        - ?: ""
+    - 2:
+        - Sofía: Me parece que faltan arreglar las porciones de postres, inténtalo nuevamente.
+- Sofía: Muy bien, vamos a llevarlo a la mesa.
+- Hide: ""
+- Sofía: Ya está todo listo, a mi familia le encantó la cena.
+- Sofía: Muchas gracias por tu ayuda. Eres muy bueno en esto.
+- Sofía: ¡Hasta la próxima!

@@ -1,0 +1,65 @@
+[
+  {
+    "Pablo": "¡Hola otra vez!"
+  },
+  {
+    "Pablo": "Gracias otra vez por ayudarme a ordenar mi cuarto. Estuviste increíble."
+  },
+  {
+    "Pablo": "Ahora te propongo un reto."
+  },
+  {
+    "Sofía": "Para completarlo te recomiendo usar lo que aprendiste en la actividad."
+  },
+  {
+    "Show": ""
+  },
+  {
+    "Pablo": "Ingresa el número de objetos e indícame si son mayores, menores o iguales."
+  },
+  {
+    "Show": ""
+  },
+  {
+    "?": [
+      {
+        "1": [
+          {
+            "Pablo": "¡Muy bien!"
+          }
+        ]
+      },
+      {
+        "2": [
+          {
+            "?": ""
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Hide": ""
+  },
+  {
+    "Pablo": "¡Qué mal! Esa no era la respuesta."
+  },
+  {
+    "Hide": ""
+  },
+  {
+    "Pablo": "Pero te felicito, lo hiciste muy bien."
+  },
+  {
+    "Show": ""
+  },
+  {
+    "Pablo": "Ahora elige si quieres repetir el reto o pasar a la siguiente actividad."
+  },
+  {
+    "?": ""
+  },
+  {
+    "Pablo": "¡Hasta la próxima!"
+  }
+]

@@ -1,0 +1,22 @@
+- Sofía: ¡Hola de nuevo!
+- Sofía: Hiciste un gran trabajo ayudándome con la preparación de la cena.
+- Sofía: Ahora te propongo un reto.
+- Sofía: Para completarlo te recomiendo usar lo que aprendiste en la actividad.
+- Show: ""
+- Sofía: ¿Cúantos ingredientes podrás contar sin equivocarte?
+- Show: ""
+- Add:
+    - Sofía: "Ingresa el número de: "
+- ?:
+    - 1:
+        - Sofía: ¡Muy bien!
+    - 2:
+        - ?: ""
+- Hide: ""
+- Sofía: ¡Qué mal! Esa no era la respuesta.
+- Hide: ""
+- Sofía: Pero te felicito, lo hiciste muy bien.
+- Show: ""
+- Sofía: Ahora elige si quieres repetir el reto o pasar a la siguiente actividad.
+- ?: ""
+- Sofía: ¡Hasta la próxima!
