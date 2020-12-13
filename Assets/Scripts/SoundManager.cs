@@ -32,8 +32,6 @@ public class SoundManager : MonoBehaviour
                 counter++;
                 break;
             case "bien":
-                audioName = type;
-                break;
             case "mal":
                 audioName = type;
                 break;
@@ -42,7 +40,7 @@ public class SoundManager : MonoBehaviour
 
         if (sound == null)
         {
-            duration = 1;
+            duration = 3;
         }
         else
         {

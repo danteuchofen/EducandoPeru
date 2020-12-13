@@ -228,8 +228,8 @@ public class GameManager : MonoBehaviour
         if (active)
         {
             imageSize = _gameObject.transform.GetChild(2).GetComponent<RectTransform>().localScale;
-            _gameObject.gameObject.SetActive(true);
             if (imageSize != Vector2.zero) image.rectTransform.DOScale(Vector2.zero, 0);
+            _gameObject.gameObject.SetActive(true);
             image.rectTransform.DOScale(imageSize, tweenSpeed);
         }
         else

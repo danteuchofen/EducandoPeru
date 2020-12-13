@@ -40,11 +40,12 @@ public class ChallengeManager : MonoBehaviour
         currentStreak = _currentStreak;
         if (currentStreak > highStreak)
         {
-            PlayerPrefs.SetInt(streakName, highStreak);
+            print("Ok");
+            PlayerPrefs.SetInt(streakName, _currentStreak);
+            PlayerPrefs.Save();
             highStreak = _currentStreak;
         }
         streakDisplay.text = "Racha actual: " + currentStreak + "\n" + "Racha más alta: " + highStreak;
-        PlayerPrefs.Save();
     }
 
     void RestartActCompleted()
